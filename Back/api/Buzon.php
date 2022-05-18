@@ -5,7 +5,7 @@ include 'conn.php';
 switch ($_SERVER['REQUEST_METHOD']) {
     case 'POST':
         $_POST = json_decode(file_get_contents('php://input'), true);
-        $buzon = new Buzon( $_POST["queja"], $_POST["fecha"], $_POST["idColonia"], $_POST["idQueja"]);
+        $buzon = new Buzon($_POST["idBuzon"], $_POST["queja"], $_POST["fecha"], $_POST["idColonia"], $_POST["idQueja"]);
         $buzon->GuardarBuzon();
         $resultado["mensaje"] = "Guardar el reporte, informacion: " . json_encode($_POST);
         echo json_encode($resultado);

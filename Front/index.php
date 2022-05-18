@@ -32,8 +32,8 @@
                         <div class="col">
 
                             <div class="form-group">
-                                <label for="">Nombre</label>
-                                <input type="text" name="nombre" id="nombre" class="form-control">
+                                <label for="">Colonia</label>
+                                <input type="text" name="idColonia" id="idColonia" class="form-control">
 
                             </div>
 
@@ -41,8 +41,8 @@
                         <div class="col">
 
                             <div class="form-group">
-                                <label for="">Apellido</label>
-                                <input type="text" name="apellido" id="apellido" class="form-control">
+                                <label for="">Tipo mensaje</label>
+                                <input type="text" name="idBuzon" id="idBuzon" class="form-control">
                             </div>
 
                         </div>
@@ -50,12 +50,12 @@
 
                     <div class="form-group">
                         <label for="">Mensaje</label>
-                        <input type="date" name="fechaNacimiento" id="fechaNacimiento" class="form-control">
+                        <input type="tecxt" name="queja" id="queja" class="form-control">
                     </div>
 
                     <div class="form-group">
-                        <label for="">Pais</label>
-                        <input type="text" name="pais" id="pais" class="form-control">
+                        <label for="">Fecha</label>
+                        <input type="date" name="fecha" id="fecha" class="form-control">
                     </div>
 
                     <div class="btn-group" role="group">

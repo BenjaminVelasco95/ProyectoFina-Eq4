@@ -77,20 +77,20 @@ function guardar() {
 }
 
 function limpiar() {
-    document.getElementById('nombre').value = null;
-    document.getElementById('apellido').value = null;
-    document.getElementById('fechaNacimiento').value = null;
-    document.getElementById('pais').value = null;
+    document.getElementById('queja').value = null;
+    document.getElementById('fecha').value = null;
+    document.getElementById('idColonia').value = null;
+    document.getElementById('idBuzon').value = null;
     document.getElementById('btn-guardar').style.display = 'inline';
     document.getElementById('btn-actualizar').style.display = 'none';
 }
 
 function actualizar() {
     let buzon = {
-        "nombre": document.getElementById('nombre').value,
-        "apellido": document.getElementById('apellido').value,
+        "queja": document.getElementById('queja').value,
+        "idColonia": document.getElementById('idColonia').value,
         "fechaNacimiento": document.getElementById('fechaNacimiento').value,
-        "pais": document.getElementById('pais').value
+        "idBuzon": document.getElementById('idBuzon').value
     };
     console.log('buzon a actualizar', buzon);
     axios({
@@ -116,10 +116,11 @@ function seleccionar(indice) {
         responseType: 'json',
     }).then(res => {
         console.log(res.data);
-        document.getElementById('nombre').value =res.data.nombre ;
-        document.getElementById('apellido').value =res.data.apellido ;
-        document.getElementById('fechaNacimiento').value =res.data.fechaNacimiento ;
-        document.getElementById('pais').value =res.data.pais ;
+        document.getElementById('idBuzon') = res.data.idBuzon;
+        document.getElementById('queja').value =res.data.queja ;
+        document.getElementById('idColonia').value =res.data.idColonia ;
+        document.getElementById('fecha').value =res.data.fecha ;
+        document.getElementById('idBuzon').value =res.data.idBuzon ;
         document.getElementById('btn-guardar').style.display = 'none';
         document.getElementById('btn-actualizar').style.display = 'inline';
     }).catch(error => {
